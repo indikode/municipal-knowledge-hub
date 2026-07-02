@@ -1,0 +1,29 @@
+body {
+font-family: Arial, sank-serif;
+max-width: 900px;
+margin: 40px auto; padding: 20px;
+text-align: center;
+}
+h1 {
+color: #005a9c;
+}
+button {
+
+padding: 12px 20px;
+margin: 10px;
+cursor: pointer;
+}
+
+#chat-history {
+    border: 1px solid #cccccc;
+    min-height: 200px;
+    padding: 15px;
+    text-align: left;
+    margin-top: 20px;
+    background-color: #f8f8f8;
+}
+
+#user-question {
+    width: 70%;
+    padding: 10px;
+}
