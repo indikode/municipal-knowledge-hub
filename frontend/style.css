@@ -1,0 +1,15 @@
+body {
+font-family: Arial, sank-serif;
+max-width: 900px;
+margin: 40px auto; padding: 20px;
+text-align: center;
+}
+h1 {
+color: #005a9c;
+}
+button {
+
+padding: 12px 20px;
+margin: 10px;
+cursor: pointer;
+}
