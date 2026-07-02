@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Municipal Knowledge Hub</title>
-<link rel="stylesheet" href="style.css">
+    <title>Municipal Knowledge Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Municipal Knowledge Hub</h1>
-<p>
-Learn about local government, test your knowledge, and improve your understanding of municipal practices. </p>
-<hr>
-<div id="home-page">
-<h2>Welcome</h2>
-<button id="assistant-btn">
-Municipal Assistant
-</button>
-<button id="quiz-btn">
-Knowledge Challenge
-</button>
-</dive
-<div id="assistant-page" style="display:none;">
 
-    <h2>Municipal Assistant</h2>
+    <h1>Municipal Knowledge Hub</h1>
 
     <p>
-        Ask questions about municipal governance.
+        Learn about local government, test your knowledge,
+        and improve your understanding of municipal practices.
     </p>
 
-    <div id="chat-history">
+    <hr>
 
-        <p>
-            Assistant: Hello! Ask me a question about local government.
-        </p>
+    <div id="home-page">
+
+        <h2>Welcome</h2>
+
+        <button id="assistant-btn">
+            Municipal Assistant
+        </button>
+
+        <button id="quiz-btn">
+            Knowledge Challenge
+        </button>
 
     </div>
 
-    <br>
+    <div id="assistant-page" style="display:none;">
+
+        <h2>Municipal Assistant</h2>
+
+        <p>
+            Ask questions about municipal governance.
+        </p>
+
+        <div id="chat-history">
+            <p>
+                Assistant: Hello! Ask me a question about local government.
+            </p>
+        </div>
+
+        <br>
+
+        <input
+            type="text"
+            id="user-question"
+            placeholder="Type your question here"
+        >
+
+        <button id="send-question">
+            Send
+        </button>
+
+        <br><br>
+
+        <button id="home-from-assistant">
+            Back Home
+        </button>
+
+    </div>
+
+    <div id="quiz-page" style="display:none;">
+
+        <h2>Knowledge Challenge</h2>
+
+        <p>
+            Test your municipal knowledge.
+        </p>
+
+        <button id="home-from-quiz">
+            Back Home
+        </button>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>    <br>
 
     <input
         type="text"
