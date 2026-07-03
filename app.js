@@ -36,12 +36,6 @@ homeFromQuiz.addEventListener("click", () => {
     homePage.style.display = "block";
 });
 
-homeFromQuiz.addEventListener("click", () => {
-    quizPage.style.display = "none";
-    homePage.style.display = "block";
-});
-
-
 // Assistant Elements
 const sendQuestionBtn = document.getElementById("send-question");
 const userQuestionInput = document.getElementById("user-question");
@@ -147,14 +141,17 @@ const governanceQuestions = [
 ];
 
 let currentQuestion = 0;
-let score = 0;
-
 governanceBtn.addEventListener("click", () => {
+
     quizCategories.style.display = "none";
     quizContainer.style.display = "block";
 
     currentQuestion = 0;
     score = 0;
+
+    quizResults.innerHTML = "";
+
+    submitAnswer.style.display = "inline-block";
 
     loadQuestion();
 });
