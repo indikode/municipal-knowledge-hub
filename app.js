@@ -101,6 +101,8 @@ const questionNumber =
 const questionText =
     document.getElementById("question-text");
 
+const lessonText =
+    document.getElementById("lesson-text");
 const answerOptions =
     document.getElementById("answer-options");
 
