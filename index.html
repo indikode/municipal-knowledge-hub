@@ -70,17 +70,69 @@
     <!-- QUIZ PAGE -->
     <div id="quiz-page" style="display:none;">
 
-        <h2>Knowledge Challenge</h2>
+    <h2>Knowledge Challenge</h2>
 
-        <p>
-            Test your municipal knowledge.
-        </p>
+    <!-- CATEGORY SELECTION -->
+    <div id="quiz-categories">
 
-        <button id="home-from-quiz">
-            Back Home
+        <p>Choose a category to begin.</p>
+
+        <button id="governance-btn">
+            Municipal Governance
+        </button>
+
+        <br><br>
+
+        <button id="service-delivery-btn">
+            Service Delivery
+        </button>
+
+        <br><br>
+
+        <button id="participation-btn">
+            Public Participation
+        </button>
+
+        <br><br>
+
+        <button id="finance-btn">
+            Municipal Finance
+        </button>
+
+        <br><br>
+
+        <button id="comprehension-btn">
+            Comprehension Challenge
         </button>
 
     </div>
+
+    <!-- QUIZ AREA -->
+    <div id="quiz-container" style="display:none;">
+
+        <h3 id="question-number"></h3>
+
+        <p id="question-text"></p>
+
+        <div id="answer-options"></div>
+
+        <br>
+
+        <button id="submit-answer">
+            Submit Answer
+        </button>
+
+        <p id="feedback"></p>
+
+    </div>
+
+    <br>
+
+    <button id="home-from-quiz">
+        Back Home
+    </button>
+
+</div>
 
     <script src="app.js"></script>
 
