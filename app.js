@@ -308,6 +308,7 @@ submitAnswer.addEventListener("click", () => {
 submitAnswer.style.display = "none";
 
 nextQuestion.style.display = "inline-block";
+});
     
 nextQuestion.addEventListener("click", () => {
 
@@ -383,4 +384,4 @@ nextQuestion.addEventListener("click", () => {
 
         quizResults.innerHTML = message;
     }
-});});
+});
