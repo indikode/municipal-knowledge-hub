@@ -247,6 +247,10 @@ nextQuestion.style.display = "none";
 submitAnswer.style.display = "inline-block";
 
     const q = governanceQuestions[currentQuestion];
+    
+    lessonText.innerHTML =
+    "<strong>Lesson:</strong><br><br>" +
+    q.lesson;
 
     questionNumber.innerHTML =
         "Question " +
