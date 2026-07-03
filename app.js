@@ -115,58 +115,73 @@ const backToCategories =
 
 const quizResults =
     document.getElementById("quiz-results");
+const nextQuestion =
+    document.getElementById("next-question");
+
+const answerExplanation =
+    document.getElementById("answer-explanation");
 
 const governanceQuestions = [
-    {
-        question: "What does IDP stand for?",
-        options: [
-            "Internal Development Process",
-            "Infrastructure Delivery Plan",
-            "Integrated Development Plan",
-            "Integrated Delivery Process"
-        ],
-        answer: "Integrated Development Plan"
-    },
-    {
-        question: "What is the primary purpose of a ward committee?",
-        options: [
-            "Collect taxes",
-            "Support community participation",
-            "Approve municipal budgets",
-            "Hire municipal staff"
-        ],
-        answer: "Support community participation"
-    },
-    {
-        question: "Which sphere of government includes municipalities?",
-        options: [
-            "Local Government",
-            "Provincial Government",
-            "National Government",
-            "Judicial Government"
-        ],
-        answer: "Local Government"
-    },
-    {
-        question: "Which document guides municipal planning and development?",
-        options: [
-            "Constitution",
-            "IDP",
-            "Annual Report",
-            "Procurement Plan"
-        ],
-        answer: "IDP"
-    },
-    {
-        question: "Community participation is important because it helps municipalities:",
-        options: [
-            "Ignore residents",
-            "Increase traffic fines",
-            "Understand community needs",
-            "Reduce staff"
-        ],
-        answer: "Understand community needs"
-    }
+{
+    question: "What does IDP stand for?",
+    options: [
+        "Internal Development Process",
+        "Infrastructure Delivery Plan",
+        "Integrated Development Plan",
+        "Integrated Delivery Process"
+    ],
+    answer: "Integrated Development Plan",
+    explanation:
+        "The Integrated Development Plan (IDP) is the municipality's principal strategic planning document. It guides development priorities, budgeting and service delivery."
+},
+{
+    question: "What is the primary purpose of a ward committee?",
+    options: [
+        "Collect taxes",
+        "Support community participation",
+        "Approve municipal budgets",
+        "Hire municipal staff"
+    ],
+    answer: "Support community participation",
+    explanation:
+        "Ward committees help communities participate in municipal decision-making and communicate local needs to councillors."
+},
+{
+    question: "Which sphere of government includes municipalities?",
+    options: [
+        "Local Government",
+        "Provincial Government",
+        "National Government",
+        "Judicial Government"
+    ],
+    answer: "Local Government",
+    explanation:
+        "Municipalities form part of Local Government, which is one of South Africa's three spheres of government."
+},
+{
+    question: "Which document guides municipal planning and development?",
+    options: [
+        "Constitution",
+        "IDP",
+        "Annual Report",
+        "Procurement Plan"
+    ],
+    answer: "IDP",
+    explanation:
+        "The IDP is the municipality's main planning instrument and helps align projects, budgets and development priorities."
+},
+{
+    question: "Community participation is important because it helps municipalities:",
+    options: [
+        "Ignore residents",
+        "Increase traffic fines",
+        "Understand community needs",
+        "Reduce staff"
+    ],
+    answer: "Understand community needs",
+    explanation:
+        "Community participation helps municipalities understand the priorities, concerns and needs of residents."
+}
 ];
 
 let currentQuestion = 0;
@@ -214,6 +229,12 @@ backToCategories.addEventListener("click", () => {
 function loadQuestion() {
 
     feedback.innerHTML = "";
+
+answerExplanation.innerHTML = "";
+
+nextQuestion.style.display = "none";
+
+submitAnswer.style.display = "inline-block";
 
     const q = governanceQuestions[currentQuestion];
 
@@ -270,6 +291,9 @@ submitAnswer.addEventListener("click", () => {
 
         feedback.innerHTML =
             "✅ Correct!";
+        answerExplanation.innerHTML =
+    "<strong>Explanation:</strong><br>" +
+    governanceQuestions[currentQuestion].explanation;
     }
 
     else {
@@ -277,118 +301,86 @@ submitAnswer.addEventListener("click", () => {
         feedback.innerHTML =
             "❌ Incorrect. Correct answer: " +
             governanceQuestions[currentQuestion].answer;
+        answerExplanation.innerHTML =
+    "<strong>Explanation:</strong><br>" +
+    governanceQuestions[currentQuestion].explanation;
+    }
+submitAnswer.style.display = "none";
+
+nextQuestion.style.display = "inline-block";
+    
+nextQuestion.addEventListener("click", () => {
+
+    currentQuestion++;
+
+    if (
+        currentQuestion <
+        governanceQuestions.length
+    ) {
+
+        loadQuestion();
     }
 
-    setTimeout(() => {
+    else {
 
-        currentQuestion++;
+        questionNumber.innerHTML =
+            "Quiz Complete";
 
-        if (
-            currentQuestion <
-            governanceQuestions.length
-        ) {
+        questionText.innerHTML = "";
 
-            loadQuestion();
+        answerOptions.innerHTML = "";
+
+        feedback.innerHTML = "";
+
+        answerExplanation.innerHTML = "";
+
+        submitAnswer.style.display = "none";
+        nextQuestion.style.display = "none";
+
+        let message = "";
+
+        if (score <= 2) {
+
+            message = `
+                <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
+
+                <p>
+                Every expert starts somewhere.
+
+                Keep learning about local government
+                and try again.
+                </p>
+            `;
+        }
+
+        else if (score <= 4) {
+
+            message = `
+                <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
+
+                <p>
+                Good effort.
+
+                You have a solid foundation and can
+                continue building your knowledge.
+                </p>
+            `;
         }
 
         else {
 
-            questionNumber.innerHTML =
-                "Quiz Complete";
+            message = `
+                <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
 
-            questionText.innerHTML = "";
+                <p>
+                Excellent work.
 
-            answerOptions.innerHTML = "";
-
-            feedback.innerHTML = "";
-
-            submitAnswer.style.display =
-                "none";
-
-            let message = "";
-
-            if (score <= 2) {
-
-                message = `
-                    <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
-
-                    <p>
-                    Every expert starts somewhere.
-
-                    Municipal governance affects
-                    communities every day.
-
-                    Consider reviewing this topic
-                    and trying again.
-
-                    The more you learn, the better
-                    equipped you are to participate
-                    in local government matters.
-                    </p>
-
-                    <h4>Recommended Next Step</h4>
-
-                    <p>
-                    📖 Understanding Local Government
-                    (Coming Soon)
-                    </p>
-                `;
-            }
-
-            else if (score <= 4) {
-
-                message = `
-                    <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
-
-                    <p>
-                    Good effort.
-
-                    You have a solid understanding
-                    of municipal governance but
-                    there is still room to grow.
-
-                    Keep learning and strengthening
-                    your knowledge.
-                    </p>
-
-                    <h4>Recommended Next Step</h4>
-
-                    <p>
-                    📖 Understanding Local Government
-                    (Coming Soon)
-                    </p>
-                `;
-            }
-
-            else {
-
-                message = `
-                    <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
-
-                    <p>
-                    Excellent work.
-
-                    You demonstrated a strong
-                    understanding of municipal
-                    governance.
-
-                    Informed citizens help build
-                    stronger communities and
-                    support meaningful public
-                    participation.
-                    </p>
-
-                    <h4>Recommended Next Step</h4>
-
-                    <p>
-                    📖 Try the Comprehension
-                    Challenge when available.
-                    </p>
-                `;
-            }
-
-            quizResults.innerHTML = message;
+                You demonstrated strong municipal
+                governance knowledge.
+                </p>
+            `;
         }
 
-    }, 1500);
+        quizResults.innerHTML = message;
+    }
 });
