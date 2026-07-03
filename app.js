@@ -123,16 +123,24 @@ const answerExplanation =
 
 const governanceQuestions = [
 {
-    question: "What does IDP stand for?",
+    lesson:
+        "The Integrated Development Plan (IDP) is the principal strategic planning instrument of a municipality. It guides development priorities, budgeting decisions, infrastructure investment and service delivery programmes. Municipalities are required by law to develop and review their IDPs with public participation.",
+
+    question:
+        "What does IDP stand for?",
+
     options: [
         "Internal Development Process",
         "Infrastructure Delivery Plan",
         "Integrated Development Plan",
         "Integrated Delivery Process"
     ],
-    answer: "Integrated Development Plan",
+
+    answer:
+        "Integrated Development Plan",
+
     explanation:
-        "The Integrated Development Plan (IDP) is the municipality's principal strategic planning document. It guides development priorities, budgeting and service delivery."
+        "The IDP is the municipality's primary strategic planning document and guides development, budgeting and service delivery priorities."
 },
 {
     question: "What is the primary purpose of a ward committee?",
