@@ -383,4 +383,4 @@ nextQuestion.addEventListener("click", () => {
 
         quizResults.innerHTML = message;
     }
-});
+});});
