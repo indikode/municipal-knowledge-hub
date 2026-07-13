@@ -249,7 +249,8 @@ governanceBtn.addEventListener("click", () => {
     feedback.innerHTML = "";
 
     submitAnswer.style.display = "inline-block";
-
+    nextQuestion.innerHTML =
+    "Next Question";
     loadQuestion();
 });
 
@@ -369,7 +370,14 @@ nextQuestion.addEventListener("click", () => {
         currentQuestion <
         governanceQuestions.length
     ) {
+        if (
+    currentQuestion ===
+    governanceQuestions.length - 1
+     ) {
 
+    nextQuestion.innerHTML =
+        "View My Civic Impact Report";
+    }
         loadQuestion();
     }
 
