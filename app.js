@@ -386,11 +386,7 @@ nextQuestion.addEventListener("click", () => {
         questionNumber.innerHTML =
             "Quiz Complete";
 
-        questionText.innerHTML =
-         "Your Score: " +
-          score +
-          "/" +
-        governanceQuestions.length;
+        questionText.innerHTML = "";
 
         answerOptions.innerHTML = "";
 
