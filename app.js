@@ -124,9 +124,10 @@ const answerExplanation =
     document.getElementById("answer-explanation");
 
 const governanceQuestions = [
+
 {
-    lesson:
-        "The Integrated Development Plan (IDP) is the principal strategic planning instrument of a municipality. It guides development priorities, budgeting decisions, infrastructure investment and service delivery programmes. Municipalities are required by law to develop and review their IDPs with public participation.",
+    fact:
+        "The Integrated Development Plan (IDP) is the municipality's primary strategic planning document. It guides development priorities, budgeting decisions, infrastructure investment and service delivery programmes.",
 
     question:
         "What does IDP stand for?",
@@ -144,54 +145,91 @@ const governanceQuestions = [
     explanation:
         "The IDP is the municipality's primary strategic planning document and guides development, budgeting and service delivery priorities."
 },
+
 {
-    question: "What is the primary purpose of a ward committee?",
+    fact:
+        "Ward committees provide a link between communities and municipalities. They help residents raise concerns, share ideas and participate in local governance.",
+
+    question:
+        "What is the primary purpose of a ward committee?",
+
     options: [
         "Collect taxes",
         "Support community participation",
         "Approve municipal budgets",
         "Hire municipal staff"
     ],
-    answer: "Support community participation",
+
+    answer:
+        "Support community participation",
+
     explanation:
-        "Ward committees help communities participate in municipal decision-making and communicate local needs to councillors."
+        "Ward committees help communities participate in municipal decision-making and communicate local needs and concerns to councillors."
 },
+
 {
-    question: "Which sphere of government includes municipalities?",
+    fact:
+        "South Africa has three spheres of government: National, Provincial and Local. Municipalities form part of Local Government and are responsible for many basic services delivered directly to communities.",
+
+    question:
+        "Which sphere of government includes municipalities?",
+
     options: [
         "Local Government",
         "Provincial Government",
         "National Government",
         "Judicial Government"
     ],
-    answer: "Local Government",
+
+    answer:
+        "Local Government",
+
     explanation:
-        "Municipalities form part of Local Government, which is one of South Africa's three spheres of government."
+        "Municipalities are part of Local Government, one of South Africa's three constitutionally recognised spheres of government."
 },
+
 {
-    question: "Which document guides municipal planning and development?",
+    fact:
+        "Municipal planning, budgeting and development priorities are coordinated through the Integrated Development Plan (IDP), which is reviewed regularly with community input.",
+
+    question:
+        "Which document guides municipal planning and development?",
+
     options: [
         "Constitution",
         "IDP",
         "Annual Report",
         "Procurement Plan"
     ],
-    answer: "IDP",
+
+    answer:
+        "IDP",
+
     explanation:
-        "The IDP is the municipality's main planning instrument and helps align projects, budgets and development priorities."
+        "The Integrated Development Plan (IDP) is the municipality's main planning instrument and helps align projects, budgets and development priorities."
 },
+
 {
-    question: "Community participation is important because it helps municipalities:",
+    fact:
+        "Community participation helps municipalities understand local needs, improve accountability and ensure that development priorities reflect the concerns of residents.",
+
+    question:
+        "Community participation is important because it helps municipalities:",
+
     options: [
         "Ignore residents",
         "Increase traffic fines",
         "Understand community needs",
         "Reduce staff"
     ],
-    answer: "Understand community needs",
+
+    answer:
+        "Understand community needs",
+
     explanation:
-        "Community participation helps municipalities understand the priorities, concerns and needs of residents."
+        "Community participation helps municipalities understand the priorities, concerns and needs of residents, leading to better decision-making and service delivery."
 }
+
 ];
 
 let currentQuestion = 0;
