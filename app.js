@@ -407,39 +407,58 @@ nextQuestion.addEventListener("click", () => {
 
         if (score <= 2) {
 
-            message = `
-               <p>
-                Every expert starts somewhere.
+    message = `
+        <h3>Civic Impact Report</h3>
 
-                Keep learning about local government
-                and try again.
-                </p>
-            `;
-        }
+        <p>
+        Every expert starts somewhere.
 
-        else if (score <= 4) {
+        Keep learning about local government
+        and try again.
 
-            message = `
-                <p>
-                Good effort.
+        Understanding how municipalities work
+        helps citizens participate more effectively
+        in their communities.
+        </p>
+    `;
+}
 
-                You have a solid foundation and can
-                continue building your knowledge.
-                </p>
-            `;
-        }
+else if (score <= 4) {
 
-        else {
+    message = `
+        <h3>Civic Impact Report</h3>
 
-            message = `
-                <p>
-                Excellent work.
+        <p>
+        Good effort.
 
-                You demonstrated strong municipal
-                governance knowledge.
-                </p>
-            `;
-        }
+        You have a solid foundation and can
+        continue building your knowledge.
+
+        The more informed citizens are, the
+        stronger local democracy becomes.
+        </p>
+    `;
+}
+
+else {
+
+    message = `
+        <h3>Civic Impact Report</h3>
+
+        <p>
+        Excellent work.
+
+        You demonstrated strong municipal
+        governance knowledge.
+
+        Informed residents help strengthen
+        accountability, participation and
+        community development.
+
+        Keep up the great work.
+        </p>
+    `;
+}
 
         quizResults.innerHTML = message;
     }
