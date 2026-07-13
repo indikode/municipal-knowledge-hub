@@ -386,13 +386,19 @@ nextQuestion.addEventListener("click", () => {
         questionNumber.innerHTML =
             "Quiz Complete";
 
-        questionText.innerHTML = "";
+        questionText.innerHTML =
+         "Your Score: " +
+          score +
+          "/" +
+        governanceQuestions.length;
 
         answerOptions.innerHTML = "";
 
         feedback.innerHTML = "";
 
         answerExplanation.innerHTML = "";
+
+        lessonText.innerHTML = "";
 
         submitAnswer.style.display = "none";
         nextQuestion.style.display = "none";
