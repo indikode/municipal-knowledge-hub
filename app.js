@@ -287,9 +287,8 @@ submitAnswer.style.display = "inline-block";
     const q = governanceQuestions[currentQuestion];
     
     lessonText.innerHTML =
-    "<strong>Lesson:</strong><br><br>" +
-    q.lesson;
-
+    "<strong>Quick Fact:</strong><br><br>" +
+    q.fact;
     questionNumber.innerHTML =
         "Question " +
         (currentQuestion + 1) +
