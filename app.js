@@ -383,21 +383,25 @@ nextQuestion.addEventListener("click", () => {
 
     else {
 
-        questionNumber.innerHTML =
-            "Quiz Complete";
+   questionNumber.innerHTML =
+        "Quiz Complete";
 
-        questionText.innerHTML = "Your Score: " + score + "/" + governance questions.length;
+    lessonText.innerHTML = "";
 
-        answerOptions.innerHTML = "";
+    questionText.innerHTML =
+        "Your Score: " +
+        score +
+        "/" +
+        governanceQuestions.length;
 
-        feedback.innerHTML = "";
+    answerOptions.innerHTML = "";
 
-        answerExplanation.innerHTML = "";
+    feedback.innerHTML = "";
 
-        lessonText.innerHTML = "";
+    answerExplanation.innerHTML = "";
 
-        submitAnswer.style.display = "none";
-        nextQuestion.style.display = "none";
+    submitAnswer.style.display = "none";
+    nextQuestion.style.display = "none";
 
         let message = "";
 
