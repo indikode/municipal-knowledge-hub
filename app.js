@@ -408,9 +408,7 @@ nextQuestion.addEventListener("click", () => {
         if (score <= 2) {
 
             message = `
-                <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
-
-                <p>
+               <p>
                 Every expert starts somewhere.
 
                 Keep learning about local government
@@ -422,8 +420,6 @@ nextQuestion.addEventListener("click", () => {
         else if (score <= 4) {
 
             message = `
-                <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
-
                 <p>
                 Good effort.
 
@@ -436,8 +432,6 @@ nextQuestion.addEventListener("click", () => {
         else {
 
             message = `
-                <h3>Your Score: ${score}/${governanceQuestions.length}</h3>
-
                 <p>
                 Excellent work.
 
